@@ -1,389 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RS KRIPA COACHING CENTRE</title>
-    <style>
-        /* ===========================
-           GLOBAL STYLES
-        ============================ */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RS KRIPA COACHING CENTRE | Lucknow</title>
+  <meta name="description" content="RS KRIPA COACHING CENTRE — Quality education for Nursery to Class 8 in Lucknow. Admission Open!">
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f6f8;
-            color: #333;
-        }
+    header {
+      background: linear-gradient(135deg, #006400, #32CD32);
+      color: white;
+      text-align: center;
+      padding: 40px 10px;
+    }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+    header h1 { font-size: 2.5em; margin-bottom: 10px; }
+    header p { font-size: 1.2em; }
 
-        /* ===========================
-           HEADER & NAVIGATION
-        ============================ */
-        header {
-            background-color: #1a237e;
-            color: #fff;
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        }
+    nav {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #32CD32;
+    }
 
-        nav {
-            width: 90%;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
 
-        .logo {
-            font-size: 1.6em;
-            font-weight: bold;
-            color: #ffca28;
-            letter-spacing: 1px;
-        }
+    section {
+      margin-bottom: 40px;
+    }
 
-        .nav-links a {
-            color: white;
-            margin: 0 15px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
+    h2 {
+      color: #006400;
+      margin-bottom: 10px;
+      border-bottom: 3px solid #32CD32;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
 
-        .nav-links a:hover {
-            color: #ffca28;
-        }
+    p {
+      margin: 10px 0;
+      font-size: 1.05em;
+    }
 
-        /* ===========================
-           HERO SECTION
-        ============================ */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(to right, #1a237e, #3949ab);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-        }
+    /* Admission Form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 20px;
+    }
 
-        .hero h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
+    input, textarea, select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+      width: 100%;
+    }
 
-        .hero h2 {
-            font-size: 1.5em;
-            font-weight: 400;
-            margin-bottom: 20px;
-        }
+    button {
+      background-color: #32CD32;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-size: 1.1em;
+      cursor: pointer;
+    }
 
-        .hero a {
-            background-color: #ffca28;
-            color: #1a237e;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+    button:hover {
+      background-color: #006400;
+    }
 
-        .hero a:hover {
-            background-color: white;
-            color: #1a237e;
-        }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
 
-        /* ===========================
-           ABOUT SECTION
-        ============================ */
-        .about {
-            padding: 100px 20px;
-            text-align: center;
-            background-color: #fff;
-        }
+    .contact-info p {
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
 
-        .about h2 {
-            color: #1a237e;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
+    .whatsapp-btn {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
 
-        .about p {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.1em;
-            line-height: 1.8;
-        }
-
-        /* ===========================
-           COURSES SECTION
-        ============================ */
-        .courses {
-            background-color: #f0f2f5;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .courses h2 {
-            color: #1a237e;
-            font-size: 2.5em;
-            margin-bottom: 40px;
-        }
-
-        .course-boxes {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .course {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            width: 280px;
-            padding: 30px;
-            transition: 0.3s;
-        }
-
-        .course:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        .course h3 {
-            color: #1a237e;
-            margin-bottom: 10px;
-        }
-
-        .course p {
-            color: #555;
-        }
-
-        /* ===========================
-           ADMISSION FORM
-        ============================ */
-        .admission {
-            background-color: #fff;
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-        .admission h2 {
-            color: #1a237e;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .admission p {
-            font-size: 1.1em;
-            margin-bottom: 30px;
-        }
-
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #f4f6f8;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        form input, form select, form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-
-        form button {
-            background-color: #1a237e;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-size: 1em;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        form button:hover {
-            background-color: #3949ab;
-        }
-
-        /* ===========================
-           CONTACT SECTION
-        ============================ */
-        .contact {
-            padding: 80px 20px;
-            text-align: center;
-            background-color: #f0f2f5;
-        }
-
-        .contact h2 {
-            color: #1a237e;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .contact p {
-            font-size: 1.1em;
-            margin-bottom: 10px;
-        }
-
-        /* ===========================
-           FOOTER
-        ============================ */
-        footer {
-            background-color: #1a237e;
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-        }
-
-        footer p {
-            margin: 10px 0;
-        }
-
-        footer a {
-            color: #ffca28;
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: white;
-        }
-
-        /* ===========================
-           RESPONSIVE DESIGN
-        ============================ */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2em;
-            }
-            .course-boxes {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+    .whatsapp-btn:hover {
+      background-color: #1da851;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>RS KRIPA COACHING CENTRE</h1>
+    <p>Quality Education from Nursery to Class 8</p>
+  </header>
 
-    <!-- HEADER -->
-    <header>
-        <nav>
-            <div class="logo">RS KRIPA COACHING CENTRE</div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#courses">Courses</a>
-                <a href="#admission">Admission</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-    </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#courses">Courses</a>
+    <a href="#admission">Admission</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <!-- HERO -->
-    <section class="hero" id="home">
-        <h1>Welcome to RS KRIPA COACHING CENTRE</h1>
-        <h2>Better Education for Every Child</h2>
-        <a href="#admission">Apply for Admission</a>
+  <main>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        Welcome to <strong>RS KRIPA COACHING CENTRE</strong> — a place where learning is fun and result-oriented!
+        We provide personalized attention to each student, ensuring better understanding and strong academic foundation.
+      </p>
     </section>
 
-    <!-- ABOUT -->
-    <section class="about" id="about">
-        <h2>About Us</h2>
-        <p>
-            RS KRIPA COACHING CENTRE is dedicated to providing quality education from Nursery to Class 8th. 
-            Our goal is to build a strong foundation for every child through personalized attention, 
-            modern teaching methods, and a nurturing environment.  
-            We focus on developing not only academic skills but also confidence and discipline.
-        </p>
+    <section id="courses">
+      <h2>Our Courses</h2>
+      <p>We provide high-quality coaching for the following classes:</p>
+      <ul style="margin-left: 20px;">
+        <li>Nursery</li>
+        <li>LKG & UKG</li>
+        <li>Class 1 to 8 (All Subjects)</li>
+      </ul>
+      <p><strong>Focus:</strong> Concept clarity, regular tests, and moral development.</p>
     </section>
 
-    <!-- COURSES -->
-    <section class="courses" id="courses">
-        <h2>Our Courses</h2>
-        <div class="course-boxes">
-            <div class="course">
-                <h3>Nursery – Class 2</h3>
-                <p>Fun and engaging learning to build curiosity and strong basics.</p>
-            </div>
-            <div class="course">
-                <h3>Class 3 – 5</h3>
-                <p>Foundation for excellence with conceptual understanding and regular practice.</p>
-            </div>
-            <div class="course">
-                <h3>Class 6 – 8</h3>
-                <p>Advanced learning with special focus on Maths, Science, and English.</p>
-            </div>
-        </div>
+    <section id="admission">
+      <h2>Admission Form</h2>
+      <p>Fill the form below to enroll your child at RS KRIPA COACHING CENTRE.</p>
+
+      <!-- Admission Form using Formspree -->
+      <form action="https://formspree.io/f/xovpgakb" method="POST">
+        <input type="text" name="student_name" placeholder="Student Name" required>
+        <input type="number" name="student_age" placeholder="Age" required>
+        <input type="text" name="class" placeholder="Class (e.g., 5th)" required>
+        <input type="text" name="parent_name" placeholder="Parent/Guardian Name" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <textarea name="message" rows="3" placeholder="Additional Message (optional)"></textarea>
+        <button type="submit">Submit Admission Form</button>
+      </form>
+      <p style="font-size: 0.9em; margin-top: 10px; color: #666;">
+        (Form submissions will be sent to <strong>chitranshraj19@gmail.com</strong>)
+      </p>
     </section>
 
-    <!-- ADMISSION FORM -->
-    <section class="admission" id="admission">
-        <h2>Admission Form</h2>
-        <p>Fill out the form below to enroll your child at RS KRIPA COACHING CENTRE.</p>
-
-        <form action="#" method="post">
-            <input type="text" name="name" placeholder="Student's Full Name" required>
-            <input type="number" name="age" placeholder="Age" required>
-            <select name="class" required>
-                <option value="">Select Class</option>
-                <option value="Nursery">Nursery</option>
-                <option value="KG">KG</option>
-                <option value="Class 1">Class 1</option>
-                <option value="Class 2">Class 2</option>
-                <option value="Class 3">Class 3</option>
-                <option value="Class 4">Class 4</option>
-                <option value="Class 5">Class 5</option>
-                <option value="Class 6">Class 6</option>
-                <option value="Class 7">Class 7</option>
-                <option value="Class 8">Class 8</option>
-            </select>
-            <input type="text" name="parent" placeholder="Parent's Name" required>
-            <input type="tel" name="phone" placeholder="Contact Number" required>
-            <textarea name="message" rows="4" placeholder="Any Message (Optional)"></textarea>
-            <button type="submit">Submit Admission Form</button>
-        </form>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+        <p><strong>📍 Address:</strong> 28, Kailash Kunj, Indira Nagar, Ayodhya Road, Lucknow</p>
+        <p><strong>📞 Contact Number:</strong> <a href="tel:8423671406">8423671406</a></p>
+        <p><strong>🕒 Timings:</strong> Monday to Saturday, 5:30 PM – 8:30 PM</p>
+        <a class="whatsapp-btn" href="https://wa.me/918423671406" target="_blank">Chat on WhatsApp</a>
+      </div>
     </section>
+  </main>
 
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-        <h2>Contact Us</h2>
-        <p><strong>Address:</strong> 28, Kailash Kunj, Indira Nagar, Ayodhya Road, Lucknow</p>
-        <p><strong>Phone:</strong> <a href="tel:8423671406">8423671406</a></p>
-        <p><strong>Email:</strong> rskripacoaching@gmail.com</p>
-        <p><strong>Timings:</strong> Monday to Saturday, 5:30 PM – 8:30 PM</p>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2025 RS KRIPA COACHING CENTRE | All Rights Reserved</p>
-        <p>
-            <a href="#home">Home</a> |
-            <a href="#courses">Courses</a> |
-            <a href="#admission">Admission</a> |
-            <a href="mailto:rskripacoaching@gmail.com">Email Us</a>
-        </p>
-    </footer>
-
+  <footer>
+    <p>© 2025 RS KRIPA COACHING CENTRE | Designed with ❤️ in Lucknow</p>
+  </footer>
 </body>
 </html>
